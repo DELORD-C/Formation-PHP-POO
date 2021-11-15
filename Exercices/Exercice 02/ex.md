@@ -1,3 +1,5 @@
+# Exercice 2
+
 1. Créez une page html dans laquelle cous stockerez un formulaire de connexion (pseudo, password, submit)
 2. Créez une base de donnée dans laquelle vous créez une table qui contient les champs suivants :
     - id (clé primaire et auto incrémentation : cocher AI)
@@ -14,3 +16,25 @@
             Si la combinaison est bonne, on connecte l'utilisateur (variables session) puis on rafraichit la page
             Sinon On rafraichit juste la page
         Sinon On affiche le formulaire
+## Aide
+PDO : 
+```php
+$bdd = new PDO('mysql:host=localhost;dbname=[NOM BDD]', '[USER]', '[PASSWORD]')
+```
+Session :
+```php
+session_start();
+session_destroy();
+$_SESSION;
+```
+Rafraichissement :
+```php
+header('Refresh: 0; url=[URL]');
+```
+Requête Base de donnée :
+```php
+$query = $bdd->prepare("SELECT * FROM users WHERE email = ?");
+$query->bindParam(1, $email);
+$query->execute();
+$result = $query->fetch(PDO::FETCH_ASSOC);
+```
