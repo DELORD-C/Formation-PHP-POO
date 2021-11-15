@@ -34,3 +34,10 @@ $perso2 = new Personnage(40, 3, 'Dragon');
 
 $perso1->attaquer($perso2);
 $perso1->attaquer($perso2);
+
+//Destructeur
+//Typage
+//Déférencement
+//Namespace
+//Use
+//Class::Method()
