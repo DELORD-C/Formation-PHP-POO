@@ -7,6 +7,6 @@ function DireBonjour ($prenom) {
 // echo DireBonjour("Liam");
 
 // COOKIE
-var_dump($_COOKIE);
+// var_dump($_COOKIE);
 
-setcookie('test', 'test');
+// setcookie('test', 'test', time() + 3600, '/');
