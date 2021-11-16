@@ -13,7 +13,7 @@ class Personnage
         $this->nom = $nom;
     }
 
-    function attaquer ($cible) {
+    function attaquer (Personnage $cible) {
         $vieActuelle = $cible->getVie();
         $cible->setVie($vieActuelle - $this->attaque);
         echo $this->nom . " attaque " . $cible->nom . '<br/>';
@@ -33,4 +33,4 @@ $perso1 = new Personnage(20, 6, 'Shrek');
 $perso2 = new Personnage(40, 3, 'Dragon');
 
 $perso1->attaquer($perso2);
-$perso1->attaquer($perso2);
+$perso1->attaquer($perso1);
