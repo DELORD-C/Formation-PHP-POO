@@ -7,7 +7,7 @@ $query->execute();
 $films = $query->fetchAll(PDO::FETCH_ASSOC);
             
         foreach ($films as $key => $film) {
-            $titreFormaté = str_replace(' ', '%20', $film['films_selectionnes_au_festival']);
+            $titreFormaté = str_replace('/\s+/', '%20', $film['films_selectionnes_au_festival']);
             $url = 'https://api.themoviedb.org/3/search/movie?api_key=625b3e1220c0fca7c7ac7f6fcca786ac&language=fr-FR&query=' . $titreFormaté;
             $apiResult = json_decode(file_get_contents($url));
             if (!empty($apiResult->results)) {
