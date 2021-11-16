@@ -1,4 +1,4 @@
-# Exercice 5
+# Exercice 6
 
 ## Considérons les classes suivantes :
 - `Vehicule` abstraite qui a pour attributs :
