@@ -1,8 +1,8 @@
 # Exercice 4
 
 ## Considérons une classe appelée Stagiaire ayant les attributs suivants :
-- ```$nom``` : un attribut privé de type chaîne de caractère
-- ```$notes``` : un attribut privé de type tableau de réels
+- `$nom` : un attribut privé de type chaîne de caractère
+- `$notes` : un attribut privé de type tableau de réels
 
 1. Créez la classe Stagiaire
 2. Créez ou générez les getters et setters des deux attributs.
@@ -11,9 +11,9 @@
 5. Ecrivez les méthodes trouverMax() et trouverMin() qui permettent de retourner respectivement les notes max et min d’un stagiaire.
 
 ## Considérons maintenant une classe appelée Formation ayant les attributs suivants :
-- ```$intitulé``` : un attribut privé de type chaîne de caractère
-- ```$nbrJours``` : un attribut privé de type entier
-- ```$stagiaires``` : un tableau d’objets de type Stagiaire
+- `$intitulé` : un attribut privé de type chaîne de caractère
+- `$nbrJours` : un attribut privé de type entier
+- `$stagiaires` : un tableau d’objets de type Stagiaire
 6. Créez la classe Formation, générez les getters et setters de ses attributs, et définissez le constructeur Formation(string $intitulé, int $nbrJours, array $stagiaires)
 7. Ecrivez une méthode calculerMoyenneFormation() qui retourne la moyenne d’un objet de type formation (la moyenne des moyennes des stagiaires)
 8. Ecrivez une méthode getIndexMax() qui retourne l’indice du stagiaire dans le tableau stagiaires ayant la meilleure moyenne de la formation.

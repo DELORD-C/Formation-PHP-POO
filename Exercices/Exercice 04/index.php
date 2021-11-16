@@ -14,7 +14,7 @@ class Stagiaire {
  		return $this->nom; 
 	} 
 
-	function setNom($nom) {  
+	function setNom(string $nom) {  
 		$this->nom = $nom; 
 	}
 
@@ -22,7 +22,7 @@ class Stagiaire {
         return $this->notes; 
     } 
 
-    function setNotes($notes) {  
+    function setNotes(array $notes) {  
         $this->notes = $notes; 
     } 
 
@@ -59,7 +59,7 @@ class Stagiaire {
 class Formation {
     private $intitulé;
     private $nbrJours;
-    public $stagiaires;
+    private $stagiaires;
 
     function __construct(string $intitule, int $nbrJours, array $stagiaires)
     {
@@ -68,24 +68,24 @@ class Formation {
         $this->stagiaires = $stagiaires;
     }
 
-    function setIntitulé ($intitule) {
+    function setIntitulé (string $intitule) {
         $this->intitulé = $intitule;
-    }
-
-    function setNbrJours ($nbrJours) {
-        $this->nbrJours = $nbrJours;
-    }
-
-    function setStagiaires ($stagiaires) {
-        $this->stagiaires = $stagiaires;
     }
 
     function getIntitulé () {
         return $this->intitulé;
     }
 
+    function setNbrJours (int $nbrJours) {
+        $this->nbrJours = $nbrJours;
+    }
+
     function getNbrJours () {
         return $this->nbrJours;
+    }
+
+    function setStagiaires (array $stagiaires) {
+        $this->stagiaires = $stagiaires;
     }
 
     function getStagiaires () {
@@ -132,7 +132,7 @@ class Formation {
         return $max->trouverMin();
     }
 
-    function trouverMoyenneParNom($nom) {
+    function trouverMoyenneParNom(string $nom) {
         foreach ($this->stagiaires as $key => $stagiaire) {
             if ($stagiaire->getNom() == $nom) {
                 return $stagiaire->calculerMoyenne();
@@ -141,13 +141,9 @@ class Formation {
     }
 }
 
-
-
-
 $stagiaire1 = new Stagiaire('David', [13, 16, 17, 8, 17]);
 $stagiaire2 = new Stagiaire('Florian', [8, 6, 5, 8, 19]);
 $stagiaire3 = new Stagiaire('Jeremy', [8, 6, 5, 8, 2]);
 $stagiaire4 = new Stagiaire('Tim', [8, 6, 15, 8, 18]);
 $formation = new Formation('PHP', 5, [$stagiaire1, $stagiaire2, $stagiaire3, $stagiaire4]);
-echo '<pre>';
-echo $formation->calculerMoyenneFormation();
+// echo $formation->calculerMoyenneFormation();
