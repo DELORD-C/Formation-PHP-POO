@@ -1,11 +1,11 @@
 <?php
 
 Abstract class Vehicule {
-    private $nom;
-    private $acceleration;
-    private $freinage;
-    private $marque;
-    private $vitesse = 0;
+    protected $nom;
+    protected $acceleration;
+    protected $freinage;
+    protected $marque;
+    protected $vitesse = 0;
 
     function __construct (string $nom, int $acceleration, int $freinage, string $marque)
     {
@@ -49,5 +49,9 @@ Abstract class Vehicule {
 
     function accélérer () {
         $this->vitesse += $this->acceleration;
+    }
+
+    function getVitesse() {
+        return $this->vitesse;
     }
 }
