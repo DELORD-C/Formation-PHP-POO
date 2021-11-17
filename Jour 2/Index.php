@@ -74,6 +74,3 @@ $eppe = new Epee (10, 'Argent');
 $fusil = new Fusil (10, 10);
 
 
-//Class::Method()
-//Namespace
-//Use
