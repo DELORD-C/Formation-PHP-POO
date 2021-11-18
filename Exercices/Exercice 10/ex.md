@@ -11,8 +11,8 @@
 
 3. Sur l'index.php, afficher une liste comportant les 10 derniers films ajoutés. (ajouter et utiliser une nouvelle méthode à notre classe `Films`)
 
-4. Lorsque l'on clique sur un élément de la liste précédemment créé, on obtient une page avec l'affiche et le résumé du film.
+4. Lorsque l'on clique sur un élément de la liste précédemment créé, on doit obtenir une page avec l'affiche et le résumé du film. (ajouter et utiliser une nouvelle méthode à notre classe `Films`)
 
-5. Pareil pour la liste des résultats de recherche
+5. Idem pour la liste des résultats de recherche
 
 6. Styliser l'ensemble des pages pour arriver à un résultat harmonieux
