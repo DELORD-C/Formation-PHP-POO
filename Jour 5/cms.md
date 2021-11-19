@@ -1,3 +1,5 @@
+# Création d'un CMS
+
 1. Créer une base de donnée "cms" dans laquelle on créé 2 tables :
    - users
      - id
@@ -19,3 +21,9 @@
 
 4. S'assurer que toutes les pages requiert la connexion avant de s'afficher et/ou de s'executer
 
+Bonus :
+   - S'assure que seul l'auteur de l'article puisse le modifier.
+   - Créer des rôles (Administrateur, Createur, Visiteur) qu'on applique aux users (créer une nouvelle colonne dans la abse de donnée) puis s'assurer que notre site respecte les règles suivantes :
+     - Les administrateurs ont tous les droits, même de supprimer ou modifier des articles qui ne leur appartiennent pas
+     - Les créateurs peuvent créer des articles, modifier ou supprimer leurs articles
+     - Les visiteurs peuvent uniquement visionner des articles
