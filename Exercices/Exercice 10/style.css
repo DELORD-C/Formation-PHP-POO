@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    font-family: roboto;
+}
+
+body {
+    background-color: #C4C4C4;
+}
+
+.recherche {
+    padding: 50px 0px;
+    display: flex;
+    justify-content: center;
+}
+
+#search {
+    width: 450px;
+}
+
+#submit-search {
+    margin-left: -87px;
+}
+
+input {
+    color: #FFF;
+    border-radius: 13px;
+    background-color: #939393;
+    padding: 7px 10px;
+    border: none;
+}
+
+input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+input[type='submit'] {
+    background-color: #E9E9E9;
+    color: black;
+}
