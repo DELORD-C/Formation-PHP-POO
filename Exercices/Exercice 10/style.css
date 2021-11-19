@@ -2,16 +2,30 @@
 
 * {
     font-family: roboto;
+    box-sizing: content-box;
 }
 
 body {
-    background-color: #C4C4C4;
+    background-color: #000000;
+    background-image: url('bg.jpg');
 }
 
 .recherche {
     padding: 50px 0px;
     display: flex;
     justify-content: center;
+}
+
+.creation {
+    width: 800px;
+    margin: auto;
+    display: flex;
+    flex-flow: wrap;
+}
+
+.creation > input {
+    width: calc(33.33% - 50px);
+    margin: 25px 15px;
 }
 
 #search {
@@ -37,4 +51,36 @@ input::placeholder {
 input[type='submit'] {
     background-color: #E9E9E9;
     color: black;
+}
+
+.liste {
+    display: flex;
+    width: 1100px;
+    flex-flow: wrap;
+    margin: auto;
+}
+
+.liste > a:hover {
+    filter: brightness(0.5);
+}
+
+.liste > a {
+    width: calc(20% - 60px);
+    display: block;
+    margin: 30px;
+    position: relative;
+    color: #FFF;
+    transition: 0.3s;
+}
+
+.liste > a > img {
+    width: 100%;
+}
+
+.liste h2 {
+    position: absolute;
+    font-size: 16px;
+    text-align: center;
+    width: 100%;
+    bottom: -30px;
 }

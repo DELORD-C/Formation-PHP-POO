@@ -47,11 +47,17 @@ class Films {
         $results = $query->fetchAll(PDO::FETCH_ASSOC);
         $return = '';
         foreach ($results as $key => $film) {
+            $apiResult = $this->getApiDetails($film['films_selectionnes_au_festival']);
+            if (empty($apiResult->results)) {
+                $img = 'default.png';
+            }
+            else {
+                $img = "https://www.themoviedb.org/t/p/w600_and_h900_bestv2" . $apiResult->results[0]->poster_path;
+            }
             $return .= "
             <a href='details.php?id=" . $film['id'] . "' class='film'>
+                <img src='$img'>
                 <h2>" . $film['films_selectionnes_au_festival'] . "</h2>
-                <p>" . $film['annee'] . "</p>
-                <p>" . $film['realisateurs'] . "</p>
             </a>
             ";
         }
