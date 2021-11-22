@@ -1,13 +1,5 @@
 <?php
 
-//Destructeur
-//Typage
-//Déférencement
-
-//Abstract
-//Extend
-//Implements
-
 class Voiture {
     private $modele;
 

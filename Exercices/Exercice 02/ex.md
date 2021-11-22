@@ -1,6 +1,6 @@
 # Exercice 2
 
-1. Créez une page html dans laquelle cous stockerez un formulaire de connexion (pseudo, password, submit)
+1. Créez un fichier html dans laquelle cous stockerez un formulaire de connexion (pseudo, password, submit)
 2. Créez une base de donnée dans laquelle vous créez une table qui contient les champs suivants :
     - id (clé primaire et auto incrémentation : cocher AI)
     - pseudo
